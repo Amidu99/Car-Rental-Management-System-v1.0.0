@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.wheeldeal.controller.RideDriverFormController">
+   <children>
+      <ImageView fitHeight="450.0" fitWidth="850.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/frames/Frame-panes.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="317.0" layoutY="15.0" text="Select Driver">
+         <font>
+            <Font name="Showcard Gothic" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="70.0" text="Ride No">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txtRideNo" blendMode="MULTIPLY" disable="true" editable="false" layoutX="50.0" layoutY="95.0" prefHeight="30.0" prefWidth="200.0" />
+      <Label layoutX="325.0" layoutY="70.0" text="Ride Date">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <DatePicker fx:id="txtRideDate" blendMode="MULTIPLY" disable="true" editable="false" layoutX="325.0" layoutY="95.0" prefHeight="30.0" prefWidth="200.0" />
+      <Label layoutX="600.0" layoutY="70.0" text="Driver ID*">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txtDriverID" blendMode="MULTIPLY" disable="true" editable="false" layoutX="600.0" layoutY="95.0" prefHeight="30.0" prefWidth="200.0" />
+      <Label fx:id="lblDriver" layoutX="100.0" layoutY="155.0" text="">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TableView fx:id="tblDriver" blendMode="MULTIPLY" layoutX="100.0" layoutY="175.0" onMouseClicked="#tblDriverOnAction" prefHeight="225.0" prefWidth="650.0">
+         <columns>
+            <TableColumn fx:id="colDriverID" editable="false" prefWidth="100.0" text="Driver_ID" />
+            <TableColumn fx:id="colName" editable="false" prefWidth="200.0" text="Name" />
+            <TableColumn fx:id="colLocation" editable="false" minWidth="0.0" prefWidth="150.0" text="Location" />
+            <TableColumn fx:id="colTel" editable="false" prefWidth="200.0" text="Contact_No" />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </TableView>
+      <JFXButton fx:id="btnSave" contentDisplay="TOP" graphicTextGap="0.0" layoutX="770.0" layoutY="290.0" onAction="#btnSaveOnAction" prefHeight="60.0" prefWidth="60.0" text="Save" textFill="#0ac613">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnExit" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="775.0" layoutY="380.0" onAction="#btnExitOnAction" prefHeight="60.0" prefWidth="60.0">
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-exit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

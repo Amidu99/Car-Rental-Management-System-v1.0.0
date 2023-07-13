@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.wheeldeal.controller.RideFormController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="2200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/frames/Frame-setride.png" />
+         </image>
+      </ImageView>
+      <ImageView blendMode="OVERLAY" fitHeight="650.0" fitWidth="1200.0" opacity="0.35" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/frames/Frames-glow.gif" />
+         </image>
+      </ImageView>
+      <Label blendMode="MULTIPLY" layoutX="560.0" layoutY="35.0" text="MANAGE  Rides">
+         <font>
+            <Font name="Showcard Gothic" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="499.0" layoutY="133.0" text="Ride No*">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txtRideNo" blendMode="MULTIPLY" layoutX="499.0" layoutY="158.0" onAction="#txtRideNoOnAction" prefHeight="30.0" prefWidth="200.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label layoutX="796.0" layoutY="133.0" text="Customer ID*">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <JFXComboBox fx:id="cmbCustID" blendMode="MULTIPLY" editable="true" layoutX="774.0" layoutY="156.0" onAction="#cmbCustIDOnAction" prefHeight="30.0" prefWidth="120.0" visibleRowCount="5">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <Label layoutX="786.0" layoutY="213.0" text="Next Ride No">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRideNo" alignment="BOTTOM_CENTER" contentDisplay="TEXT_ONLY" graphicTextGap="0.0" layoutX="774.0" layoutY="236.0" prefHeight="30.0" prefWidth="100.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Label layoutX="499.0" layoutY="213.0" text="Ride Date*">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="datePicker" blendMode="MULTIPLY" editable="false" layoutX="499.0" layoutY="238.0" onAction="#datePickerOnAction" prefHeight="30.0" prefWidth="200.0" promptText="Enter Ride Date" />
+      <TableView fx:id="tblRide" blendMode="MULTIPLY" layoutX="360.0" layoutY="400.0" onMouseClicked="#tblRideOnAction" prefHeight="190.0" prefWidth="700.0">
+         <columns>
+            <TableColumn fx:id="colRideNo" editable="false" prefWidth="125.0" text="Ride_No" />
+            <TableColumn fx:id="colCustId" editable="false" prefWidth="125.0" text="Customer_ID" />
+            <TableColumn fx:id="colRideDate" editable="false" minWidth="0.0" prefWidth="250.0" text="Ride_Date" />
+            <TableColumn fx:id="colStatus" editable="false" prefWidth="185.0" text="Ride_Status" />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </TableView>
+      <JFXButton fx:id="btnReset" alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="478.0" layoutY="286.0" onAction="#btnResetOnAction" text="Reset" textFill="#edfc6e">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-reset.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSave" alignment="CENTER" contentDisplay="TOP" graphicTextGap="3.0" layoutX="553.0" layoutY="288.0" onAction="#btnSaveOnAction" text="Save" textFill="#29c63e">
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="622.0" layoutY="286.0" onAction="#btnDeleteOnAction" text="Delete" textFill="#a81010">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSetDriver" alignment="CENTER" contentDisplay="TOP" graphicTextGap="3.0" layoutX="758.0" layoutY="286.0" onAction="#btnSetDriverOnAction" text="Set Driver" textFill="#f86d09">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-driver.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSetVehicle" contentDisplay="TOP" graphicTextGap="3.0" layoutX="848.0" layoutY="287.0" onAction="#btnSetVehicleOnAction" text="Set Vehicle" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="49.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-vehicle.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnBack" alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="77.0" layoutY="513.0" onAction="#btnBackOnAction" text="Back" textAlignment="CENTER" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Showcard Gothic" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="lblInvalidRideNo" layoutX="507.0" layoutY="190.0" text="**invalid no, ( must be like R001 )**" textFill="#d70c0c" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblInvalidCustID" layoutX="745.0" layoutY="190.0" text="**invalid id, ( must be like C001 )**" textFill="#d70c0c" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="360.0" layoutY="380.0" text="Waiting for returns..">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="25.0" arcWidth="25.0" blendMode="OVERLAY" fill="WHITE" height="330.0" layoutX="5.0" layoutY="150.0" opacity="0.5" stroke="WHITE" strokeType="INSIDE" width="220.0" />
+      <Label blendMode="MULTIPLY" layoutX="32.0" layoutY="160.0" text="Last  reservation  details">
+         <font>
+            <Font name="Showcard Gothic" size="12.0" />
+         </font>
+      </Label>
+      <Label blendMode="COLOR_BURN" layoutX="5.0" layoutY="225.0" text="Res._Date">
+         <font>
+            <Font name="Bank Gothic Medium BT" size="12.0" />
+         </font>
+      </Label>
+      <Label blendMode="COLOR_BURN" layoutX="5.0" layoutY="200.0" text="Ride no">
+         <font>
+            <Font name="Bank Gothic Medium BT" size="12.0" />
+         </font>
+      </Label>
+      <Label blendMode="COLOR_BURN" layoutX="5.0" layoutY="300.0" text="Vehic._No">
+         <font>
+            <Font name="Bank Gothic Medium BT" size="12.0" />
+         </font>
+      </Label>
+      <Label blendMode="COLOR_BURN" layoutX="5.0" layoutY="325.0" text="Ve_Model">
+         <font>
+            <Font name="Bank Gothic Medium BT" size="12.0" />
+         </font>
+      </Label>
+      <Label blendMode="COLOR_BURN" layoutX="5.0" layoutY="250.0" text="Customer">
+         <font>
+            <Font name="Bank Gothic Medium BT" size="12.0" />
+         </font>
+      </Label>
+      <Label blendMode="COLOR_BURN" layoutX="5.0" layoutY="275.0" text="Mem_Type">
+         <font>
+            <Font name="Bank Gothic Medium BT" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRideNo1" alignment="CENTER_RIGHT" blendMode="COLOR_BURN" layoutX="105.0" layoutY="200.0" prefHeight="14.0" prefWidth="120.0">
+         <font>
+            <Font name="Bank Gothic Medium BT" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRideDate" alignment="CENTER_RIGHT" blendMode="COLOR_BURN" layoutX="105.0" layoutY="225.0" prefHeight="14.0" prefWidth="120.0">
+         <font>
+            <Font name="Bank Gothic Medium BT" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCustName" alignment="CENTER_RIGHT" blendMode="COLOR_BURN" layoutX="105.0" layoutY="250.0" prefHeight="14.0" prefWidth="120.0">
+         <font>
+            <Font name="Bank Gothic Medium BT" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMembership" alignment="CENTER_RIGHT" blendMode="COLOR_BURN" layoutX="105.0" layoutY="275.0" prefHeight="14.0" prefWidth="120.0">
+         <font>
+            <Font name="Bank Gothic Medium BT" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblVehicleNo" alignment="CENTER_RIGHT" blendMode="COLOR_BURN" layoutX="105.0" layoutY="300.0" prefHeight="14.0" prefWidth="120.0">
+         <font>
+            <Font name="Bank Gothic Medium BT" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblVehicleModel" alignment="CENTER_RIGHT" blendMode="COLOR_BURN" layoutX="105.0" layoutY="325.0" prefHeight="14.0" prefWidth="120.0">
+         <font>
+            <Font name="Bank Gothic Medium BT" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="vehiImage" fitHeight="125.0" fitWidth="221.0" layoutX="5.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="lblClock" alignment="CENTER" blendMode="MULTIPLY" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="1025.0" layoutY="605.0" prefHeight="30.0" prefWidth="160.0">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </Label>
+   </children>
+</AnchorPane>

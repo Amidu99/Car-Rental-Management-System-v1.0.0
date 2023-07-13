@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="450.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.wheeldeal.controller.RideVehicleFormController">
+   <children>
+      <ImageView fitHeight="450.0" fitWidth="850.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/frames/Frame-panes.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="detailPane" prefHeight="450.0" prefWidth="850.0">
+         <children>
+            <Label layoutX="308.0" layoutY="15.0" text="Select  Vehicle">
+               <font>
+                  <Font name="Showcard Gothic" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="50.0" layoutY="70.0" text="Ride No">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtRideNo" blendMode="MULTIPLY" disable="true" editable="false" layoutX="50.0" layoutY="96.0" prefHeight="30.0" prefWidth="200.0" />
+            <Label layoutX="325.0" layoutY="70.0" text="Ride Date">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <DatePicker fx:id="txtRideDate" blendMode="MULTIPLY" disable="true" editable="false" layoutX="325.0" layoutY="96.0" prefHeight="30.0" prefWidth="200.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></DatePicker>
+            <Label layoutX="600.0" layoutY="70.0" text="Vehicle No*">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtVehiNo" blendMode="MULTIPLY" disable="true" editable="false" layoutX="600.0" layoutY="96.0" prefHeight="30.0" prefWidth="200.0" />
+            <Label layoutX="600.0" layoutY="170.0" text="Vehicle Type*">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <JFXComboBox fx:id="cmbVehiType" blendMode="MULTIPLY" layoutX="600.0" layoutY="200.0" onAction="#cmbVehiTypeOnAction" prefHeight="30.0" prefWidth="200.0" visibleRowCount="5">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXComboBox>
+            <JFXButton fx:id="btnSave" contentDisplay="TOP" graphicTextGap="0.0" layoutX="727.0" layoutY="275.0" onAction="#btnSaveOnAction" prefHeight="60.0" prefWidth="60.0" text="Save" textFill="#38bc04">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/buttons/btn-save.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Segoe UI Black" size="10.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnViewImage" contentDisplay="TOP" graphicTextGap="0.0" layoutX="625.0" layoutY="274.0" onAction="#btnViewImageOnAction" prefHeight="60.0" prefWidth="60.0" text="View Img">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/buttons/btn-image.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Segoe UI Black" size="10.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="lblVehicleType" layoutX="50.0" layoutY="175.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TableView fx:id="tblCar" blendMode="MULTIPLY" layoutX="50.0" layoutY="200.0" onMouseClicked="#tblCarOnAction" prefHeight="225.0" prefWidth="475.0" visible="false">
+               <columns>
+                  <TableColumn fx:id="colVehiNo" editable="false" prefWidth="100.0" text="Vehicle_No" />
+                  <TableColumn fx:id="colVehiModel" editable="false" prefWidth="250.0" text="Model" />
+                  <TableColumn fx:id="colCost" editable="false" minWidth="0.0" prefWidth="125.0" text="Cost_per_KM" />
+               </columns>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </TableView>
+            <TableView fx:id="tblVan" blendMode="MULTIPLY" layoutX="50.0" layoutY="200.0" onMouseClicked="#tblVanOnAction" prefHeight="225.0" prefWidth="475.0" visible="false">
+               <columns>
+                  <TableColumn fx:id="colVehiNo1" editable="false" prefWidth="100.0" text="Vehicle_No" />
+                  <TableColumn fx:id="colVehiModel1" editable="false" prefWidth="250.0" text="Model" />
+                  <TableColumn fx:id="colCost1" editable="false" minWidth="0.0" prefWidth="125.0" text="Cost_per_KM" />
+               </columns>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </TableView>
+            <TableView fx:id="tblLorry" blendMode="MULTIPLY" layoutX="50.0" layoutY="200.0" onMouseClicked="#tblLorryOnAction" prefHeight="225.0" prefWidth="475.0" visible="false">
+               <columns>
+                  <TableColumn fx:id="colVehiNo2" editable="false" prefWidth="100.0" text="Vehicle_No" />
+                  <TableColumn fx:id="colVehiModel2" editable="false" prefWidth="250.0" text="Model" />
+                  <TableColumn fx:id="colCost2" editable="false" minWidth="0.0" prefWidth="125.0" text="Cost_per_KM" />
+               </columns>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="imagePane" prefHeight="450.0" prefWidth="850.0" visible="false">
+         <children>
+            <ImageView fx:id="vehiImage" fitHeight="350.0" fitWidth="700.0" layoutX="75.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+
+               </image></ImageView>
+            <Label fx:id="lblvehiImageModel" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="175.0" layoutY="398.0" prefHeight="30.0" prefWidth="500.0" textAlignment="CENTER">
+               <font>
+                  <Font name="Serif Bold" size="25.0" />
+               </font></Label>
+            <JFXButton fx:id="btnImgExit" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="775.0" layoutY="380.0" onAction="#btnImgExitOnAction" prefHeight="60.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/buttons/btn-exit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+         </children></AnchorPane>
+      <JFXButton fx:id="btnFullExit" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="775.0" layoutY="380.0" onAction="#btnFullExitOnAction" prefHeight="60.0" prefWidth="60.0" textFill="#a42828">
+         <graphic>
+            <ImageView fitHeight="47.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-exit.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Segoe UI Black" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

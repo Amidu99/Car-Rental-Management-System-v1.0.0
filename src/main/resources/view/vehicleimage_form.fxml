@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="450.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.wheeldeal.controller.VehicleImageFormController">
+   <children>
+      <ImageView fitHeight="450.0" fitWidth="750.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../asset/frames/Frame-panes.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgView" fitHeight="300.0" fitWidth="600.0" layoutX="75.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="DISAPPEAR" />
+         </cursor></ImageView>
+      <Label fx:id="lbl" layoutX="320.0" layoutY="15.0" text="Vehicle No: ">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblVehiNo" layoutX="405.0" layoutY="15.0">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnBrowse" contentDisplay="GRAPHIC_ONLY" layoutX="280.0" layoutY="380.0" onAction="#btnBrowseOnAction" prefHeight="40.0" prefWidth="180.0">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-browse.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnImgExit" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="675.0" layoutY="380.0" onAction="#btnImgExitOnAction" prefHeight="45.0" prefWidth="45.0">
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-exit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

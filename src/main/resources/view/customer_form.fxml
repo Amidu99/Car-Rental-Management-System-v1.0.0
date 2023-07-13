@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.wheeldeal.controller.CustomerFormController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/frames/Frame-customer.png" />
+         </image>
+      </ImageView>
+      <ImageView blendMode="OVERLAY" fitHeight="650.0" fitWidth="1200.0" opacity="0.35" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/frames/Frames-glow.gif" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnReset" contentDisplay="TOP" graphicTextGap="0.0" layoutX="559.0" layoutY="278.0" onAction="#btnResetOnAction" text="Reset" textFill="#edfc6e">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-reset.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnSave" contentDisplay="TOP" graphicTextGap="3.0" layoutX="641.0" layoutY="280.0" onAction="#btnSaveOnAction" text="Save" textFill="#29c63e">
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" contentDisplay="TOP" graphicTextGap="3.0" layoutX="720.0" layoutY="278.0" onAction="#btnUpdateOnAction" text="Update" textFill="#d044af">
+         <graphic>
+            <ImageView fitHeight="47.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-update.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" contentDisplay="TOP" graphicTextGap="0.0" layoutX="795.0" layoutY="278.0" onAction="#btnDeleteOnAction" text="Delete" textFill="#a81010">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnBack" alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="77.0" layoutY="503.0" onAction="#btnBackOnAction" text="Back" textAlignment="CENTER" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Showcard Gothic" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="txtCustID" blendMode="MULTIPLY" layoutX="392.0" layoutY="150.0" onAction="#txtCustIDOnAction" prefHeight="30.0" prefWidth="200.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="txtID" blendMode="MULTIPLY" layoutX="666.0" layoutY="150.0" onAction="#txtIdOnAction" prefHeight="30.0" prefWidth="200.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="txtName" blendMode="MULTIPLY" layoutX="392.0" layoutY="229.0" onAction="#txtNameOnAction" prefHeight="30.0" prefWidth="200.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="txtTel" blendMode="MULTIPLY" layoutX="666.0" layoutY="229.0" onAction="#txtTelOnAction" prefHeight="30.0" prefWidth="200.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label layoutX="392.0" layoutY="125.0" text="Customer ID*">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="667.0" layoutY="125.0" text="National ID*">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="392.0" layoutY="204.0" text="Name*">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="667.0" layoutY="204.0" text="Contact No*">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label blendMode="MULTIPLY" layoutX="500.0" layoutY="35.0" text="Customer  MANAGE">
+         <font>
+            <Font name="Showcard Gothic" size="40.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCustomer" blendMode="MULTIPLY" layoutX="325.0" layoutY="370.0" onMouseClicked="#tblCustomerOnAction" prefHeight="190.0" prefWidth="775.0">
+         <columns>
+            <TableColumn fx:id="colCustID" editable="false" prefWidth="100.0" text="Customer_ID" />
+            <TableColumn fx:id="colID" editable="false" prefWidth="125.0" text="National_ID" />
+            <TableColumn fx:id="colName" editable="false" minWidth="0.0" prefWidth="225.0" text="Name" />
+            <TableColumn fx:id="colTel" editable="false" prefWidth="225.0" text="Contact_No" />
+            <TableColumn fx:id="colMemb" minWidth="0.0" prefWidth="85.0" text="Memb_code" />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </TableView>
+      <Label fx:id="lblNextCustID" alignment="CENTER" contentDisplay="CENTER" layoutX="940.0" layoutY="150.0" prefHeight="30.0" prefWidth="100.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <JFXComboBox fx:id="cmbMembCodes" blendMode="MULTIPLY" layoutX="940.0" layoutY="227.0" prefHeight="30.0" prefWidth="100.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <Label layoutX="950.0" layoutY="204.0" text="Membership*">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="940.0" layoutY="125.0" text="Next Customer ID">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblInvalidCustID" layoutX="372.0" layoutY="180.0" text="**invalid customer id, ( must be like 'C999' )**" textFill="#d70c0c" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblInvalidID" layoutX="725.0" layoutY="180.0" text="**invalid NIC**" textFill="#d70c0c" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblInvalidName" layoutX="435.0" layoutY="260.0" text="**invalid name type**" textFill="#d70c0c" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblInvalidTel" layoutX="710.0" layoutY="260.0" text="**invalid contact no**" textFill="#d70c0c" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="11.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="25.0" arcWidth="25.0" blendMode="OVERLAY" fill="WHITE" height="330.0" layoutX="5.0" layoutY="150.0" opacity="0.5" stroke="WHITE" strokeType="INSIDE" width="220.0" />
+      <BarChart fx:id="barChart" barGap="0.0" blendMode="MULTIPLY" categoryGap="0.0" layoutX="-5.0" layoutY="170.0" prefHeight="300.0" prefWidth="230.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM">
+               <tickLabelFont>
+                  <Font name="System Bold" size="8.0" />
+               </tickLabelFont>
+            </CategoryAxis>
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT">
+               <tickLabelFont>
+                  <Font name="System Bold" size="8.0" />
+               </tickLabelFont>
+            </NumberAxis>
+        </yAxis>
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </BarChart>
+      <Label layoutX="41.0" layoutY="160.0" text="Customer Memberships">
+         <font>
+            <Font name="Showcard Gothic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblClock" alignment="CENTER" blendMode="MULTIPLY" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="1025.0" layoutY="605.0" prefHeight="30.0" prefWidth="160.0">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </Label>
+   </children>
+</AnchorPane>

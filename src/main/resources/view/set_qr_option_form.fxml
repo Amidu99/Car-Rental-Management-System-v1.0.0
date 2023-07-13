@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="225.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.wheeldeal.controller.SetQrOptionFormController">
+   <children>
+      <ImageView fitHeight="350.0" fitWidth="300.0" layoutY="-115.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../asset/frames/Frame-panes.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="48.0" layoutY="25.0" text="Select a option to scan qr">
+         <font>
+            <Font name="Showcard Gothic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCamera" alignment="TOP_CENTER" blendMode="MULTIPLY" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="140.0" layoutY="60.0" prefHeight="44.0" prefWidth="136.0" text="scan with camera" textAlignment="CENTER" visible="false">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons/dialog-box.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <JFXButton fx:id="btnCamera" alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="105.0" layoutY="65.0" onAction="#btnCameraOnAction" onMouseEntered="#btnCameraEnter" onMouseExited="#btnCameraExit" prefHeight="65.0" prefWidth="91.0" text="Camera" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-image.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="lblUpload" alignment="TOP_CENTER" blendMode="MULTIPLY" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="140.0" layoutY="135.0" prefHeight="44.0" prefWidth="136.0" text="scan with image" textAlignment="CENTER" textFill="#db27d3" visible="false">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons/dialog-box.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <JFXButton fx:id="btnUpload" alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="105.0" layoutY="145.0" onAction="#btnUploadOnAction" onMouseEntered="#btnUploadEnter" onMouseExited="#btnUploadExit" prefHeight="65.0" prefWidth="91.0" text="Upload" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-update.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

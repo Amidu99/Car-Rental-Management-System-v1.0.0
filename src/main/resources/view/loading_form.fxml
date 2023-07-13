@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.wheeldeal.controller.LoadingFormController">
+   <children>
+      <ProgressBar fx:id="progressBar" blendMode="SCREEN" layoutX="115.0" layoutY="238.0" prefHeight="10.0" prefWidth="371.0" progress="0.0" style="-fx-accent: deepskyblue;" styleClass="custom-progress-bar" />
+      <Label fx:id="progressLabel" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="238.0" layoutY="250.0" prefHeight="18.0" prefWidth="125.0" textAlignment="CENTER" textFill="DEEPSKYBLUE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Label>
+      <ImageView fitHeight="125.0" fitWidth="371.0" layoutX="115.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/icons/logo-white.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

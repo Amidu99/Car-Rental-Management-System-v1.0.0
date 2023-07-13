@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="root" prefHeight="550.0" prefWidth="440.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.wheeldeal.controller.BillFormController">
+   <children>
+      <ImageView fitHeight="550.0" fitWidth="440.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/frames/Frame-bill.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="181.0" layoutY="15.0" text="INVOICE">
+         <font>
+            <Font name="Showcard Gothic" size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="billPane" layoutX="50.0" layoutY="50.0" prefHeight="400.0" prefWidth="340.0">
+         <children>
+            <ImageView fitHeight="60.0" fitWidth="150.0" layoutX="95.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons/logo-2lowQ.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="40.0" layoutY="105.0" text="Ride Date">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="90.0" text="Ride no">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="120.0" text="Return Date">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="210.0" text="Vehicle No">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="180.0" text="Vehicle Model">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="195.0" text="Cost per Km">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="135.0" text="Customer Name">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="150.0" text="Membership Type">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="165.0" text="Discount  Rate">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="225.0" text="Distance">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="250.0" text="Sub Total">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="270.0" text="Discount">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="300.0" text="Total">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="128.0" layoutY="353.0" text="Thank You !">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="282.0" prefHeight="12.0" prefWidth="260.0" text="..........................................................................................................................">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="317.0" prefHeight="12.0" prefWidth="260.0" text="..........................................................................................................................">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="315.0" prefHeight="15.0" prefWidth="260.0" text="...............................................................................................................................">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="235.0" prefHeight="12.0" prefWidth="260.0" text="..........................................................................................................................">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblRideNo" alignment="CENTER_RIGHT" layoutX="180.0" layoutY="90.0" prefHeight="14.0" prefWidth="120.0">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblRideDate" alignment="CENTER_RIGHT" layoutX="180.0" layoutY="105.0" prefHeight="14.0" prefWidth="120.0">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblReturnDate" alignment="CENTER_RIGHT" layoutX="180.0" layoutY="120.0" prefHeight="14.0" prefWidth="120.0">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCustName" alignment="CENTER_RIGHT" layoutX="180.0" layoutY="135.0" prefHeight="14.0" prefWidth="120.0">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblMembership" alignment="CENTER_RIGHT" layoutX="180.0" layoutY="150.0" prefHeight="14.0" prefWidth="120.0">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDiscountRate" alignment="CENTER_RIGHT" layoutX="180.0" layoutY="165.0" prefHeight="14.0" prefWidth="120.0">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblVehicleNo" alignment="CENTER_RIGHT" layoutX="180.0" layoutY="210.0" prefHeight="14.0" prefWidth="120.0">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblVehicleModel" alignment="CENTER_RIGHT" layoutX="180.0" layoutY="180.0" prefHeight="14.0" prefWidth="120.0">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCostPerKM" alignment="CENTER_RIGHT" layoutX="180.0" layoutY="195.0" prefHeight="14.0" prefWidth="120.0">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDistance" alignment="CENTER_RIGHT" layoutX="180.0" layoutY="225.0" prefHeight="14.0" prefWidth="120.0">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSubTotal" alignment="CENTER_RIGHT" layoutX="180.0" layoutY="250.0" prefHeight="17.0" prefWidth="120.0">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDiscountPrice" alignment="CENTER_RIGHT" layoutX="180.0" layoutY="270.0" prefHeight="17.0" prefWidth="120.0">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotal" alignment="CENTER_RIGHT" layoutX="180.0" layoutY="300.0" prefHeight="19.0" prefWidth="120.0">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="57.0" prefHeight="12.0" prefWidth="260.0" text="..........................................................................................................................">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnPrint" contentDisplay="TOP" graphicTextGap="0.0" layoutX="285.0" layoutY="475.0" onAction="#btnPrintOnAction" prefHeight="50.0" prefWidth="50.0" text="Print" textAlignment="CENTER" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-print.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnExit" contentDisplay="TOP" graphicTextGap="0.0" layoutX="350.0" layoutY="475.0" onAction="#btnExitOnAction" prefHeight="50.0" prefWidth="50.0" text="Exit" textFill="#a81010">
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-exit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

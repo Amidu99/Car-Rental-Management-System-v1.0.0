@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="225.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.wheeldeal.controller.SetYearMonthFormController">
+   <children>
+      <ImageView fitHeight="350.0" fitWidth="300.0" layoutY="-125.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../asset/frames/Frame-panes.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtYear" blendMode="MULTIPLY" layoutX="71.0" layoutY="76.0" onAction="#txtYearOnAction">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txtMonth" blendMode="MULTIPLY" layoutX="71.0" layoutY="125.0" onAction="#txtMonthOnAction">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <JFXButton fx:id="btnAdd" alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="120.0" layoutY="160.0" onAction="#btnAddOnAction" prefHeight="60.0" prefWidth="60.0" text="view" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-view.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="111.0" layoutY="59.0" text="Enter the Year">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="104.0" layoutY="108.0" text="Enter the Month">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblWarning" layoutX="81.0" layoutY="148.0" text="use only valid numbers.." textFill="#b90c0c" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="12.0" text="Enter values to view report">
+         <font>
+            <Font name="Showcard Gothic" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

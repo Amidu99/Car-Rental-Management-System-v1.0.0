@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.wheeldeal.controller.QrReaderFormController">
+   <children>
+      <ImageView fitHeight="450.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/frames/Frame-QR.png" />
+         </image>
+      </ImageView>
+      <Label blendMode="MULTIPLY" layoutX="71.0" layoutY="15.0" text="QR  code  scanner">
+         <font>
+            <Font name="Showcard Gothic" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="qrViewer" fitHeight="200.0" fitWidth="200.0" layoutX="60.0" layoutY="60.0" onMouseClicked="#imgClickOnAction" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ImageView>
+      <JFXTextArea fx:id="txtDetails" blendMode="MULTIPLY" editable="false" focusColor="#0f39e1" layoutX="40.0" layoutY="275.0" prefHeight="100.0" prefWidth="240.0" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor></JFXTextArea>
+      <JFXButton fx:id="btnBrowse" contentDisplay="GRAPHIC_ONLY" layoutX="65.0" layoutY="397.0" onMouseClicked="#btnBrowseOnAction" prefHeight="40.0" prefWidth="180.0" text="Browse">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-browse.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnExit" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="259.0" layoutY="397.0" onAction="#btnExitOnAction" prefHeight="50.0" prefWidth="50.0" text="Exit" textFill="#a81010">
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-exit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

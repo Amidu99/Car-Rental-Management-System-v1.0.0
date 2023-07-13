@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.wheeldeal.controller.DashboardFormController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/frames/Frame-dashboard.png" />
+         </image>
+      </ImageView>
+      <ImageView blendMode="SCREEN" fitHeight="650.0" fitWidth="1200.0" opacity="0.25" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../asset/frames/Dash-glow.gif" />
+         </image></ImageView>
+      <Label fx:id="lblHello" alignment="CENTER" graphicTextGap="0.0" layoutX="25.0" layoutY="72.0" prefHeight="20.0" prefWidth="180.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor></Label>
+      <JFXButton fx:id="btnAdmin" contentDisplay="GRAPHIC_ONLY" layoutY="98.0" onAction="#btnAdminOnAction" prefHeight="30.0" prefWidth="215.0" text="Admin">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="215.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons/man1a.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane fx:id="checkforAdminPane" layoutY="130.0" prefHeight="110.0" prefWidth="230.0" visible="false">
+         <children>
+            <PasswordField fx:id="txtPassword" blendMode="MULTIPLY" layoutX="38.0" layoutY="43.0" onAction="#txtPasswordOnAction" prefHeight="25.0" prefWidth="150.0" promptText="Enter your password.." />
+            <JFXButton fx:id="btnEnterAdminPass" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="93.0" layoutY="70.0" onAction="#btnEnterAdminPassOnAction" prefHeight="25.0" prefWidth="25.0" text="view" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/buttons/btn-view.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="26.0" layoutY="4.0" prefHeight="15.0" prefWidth="180.0" text="Get verify with your password," textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </Label>
+            <Label layoutX="26.0" layoutY="20.0" prefHeight="15.0" prefWidth="180.0" text="to view the Admin Panel.." textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="adminPane" layoutY="125.0" prefHeight="110.0" prefWidth="220.0" visible="false">
+         <children>
+            <JFXButton fx:id="btnUsers" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutY="-1.0" onAction="#btnUsersOnAction" prefHeight="30.0" prefWidth="215.0">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="215.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icons/man2u.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnEmployees" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutY="25.0" onAction="#btnEmployeesOnAction" prefHeight="30.0" prefWidth="215.0">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="215.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icons/man3e.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnMemberships" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutY="50.0" onAction="#btnMembershipsOnAction" prefHeight="30.0" prefWidth="215.0">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="215.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icons/man4m.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnAdminExit" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutY="75.0" onAction="#btnAdminExitOnAction" prefHeight="30.0" prefWidth="215.0">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="215.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icons/man5e.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnCustomer" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutY="263.0" onAction="#btnCustomerOnAction" prefHeight="25.0" prefWidth="220.0" text="Customer">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="215.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons/setting1cu.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDriver" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutY="287.0" onAction="#btnDriverOnAction" prefHeight="25.0" prefWidth="220.0" text="Driver">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="215.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons/setting2dr.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnVehicle" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutY="311.0" onAction="#btnVehicleOnAction" prefHeight="25.0" prefWidth="220.0" text="Vehicle">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="215.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons/setting3ve.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnSetride" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutY="334.0" onAction="#btnSetrideOnAction" prefHeight="25.0" prefWidth="220.0" text="SetRide">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="215.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons/setting4sr.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnReturns" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutY="358.0" onAction="#btnReturnsOnAction" prefHeight="25.0" prefWidth="220.0" text="Returns">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="215.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons/setting5re.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="lblReport1" alignment="TOP_CENTER" blendMode="MULTIPLY" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="185.0" layoutY="425.0" prefHeight="60.0" prefWidth="220.0" text=" view customer report" textAlignment="CENTER" textFill="#0088ff" visible="false">
+         <graphic>
+            <ImageView fitHeight="60.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons/dialog-box.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblReport2" alignment="TOP_CENTER" blendMode="MULTIPLY" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="185.0" layoutY="452.0" prefHeight="60.0" prefWidth="220.0" text="view driver report" textAlignment="CENTER" textFill="#b5aeae" visible="false">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="60.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons/dialog-box.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label fx:id="lblReport3" alignment="TOP_CENTER" blendMode="MULTIPLY" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="185.0" layoutY="479.0" prefHeight="60.0" prefWidth="220.0" text="view vehicle report" textAlignment="CENTER" textFill="#ff8e00" visible="false">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="60.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons/dialog-box.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label fx:id="lblReport4" alignment="TOP_CENTER" blendMode="MULTIPLY" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="185.0" layoutY="479.0" prefHeight="60.0" prefWidth="220.0" text="view income report" textAlignment="CENTER" textFill="#6b6664" visible="false">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="60.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons/dialog-box.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <JFXButton fx:id="btnQrScanner" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutY="422.0" onAction="#btnQrScannerOnAction" prefHeight="25.0" prefWidth="220.0" text="QR">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="215.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons/info1-.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnReport1" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutY="449.0" onAction="#btnReport1OnAction" onMouseEntered="#btnReport1OnMouseEnter" onMouseExited="#btnReport1OnMouseExit" prefHeight="25.0" prefWidth="220.0" text="report1">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="215.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons/info2-.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnReport2" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutY="476.0" onAction="#btnReport2OnAction" onMouseEntered="#btnReport2OnMouseEnter" onMouseExited="#btnReport2OnMouseExit" prefHeight="25.0" prefWidth="220.0" text="report2">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="215.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons/info3-.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnReport3" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutY="502.0" onAction="#btnReport3OnAction" onMouseEntered="#btnReport3OnMouseEnter" onMouseExited="#btnReport3OnMouseExit" prefHeight="25.0" prefWidth="220.0" text="report3">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="215.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons/info4-.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnReport4" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutY="529.0" onAction="#btnReport4OnAction" onMouseEntered="#btnReport4OnMouseEnter" onMouseExited="#btnReport4OnMouseExit" prefHeight="25.0" prefWidth="220.0" text="report4">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="215.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons/info5-.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnLogout" contentDisplay="GRAPHIC_ONLY" layoutX="80.0" layoutY="578.0" onAction="#btnLogoutOnAction" prefHeight="50.0" prefWidth="50.0" text="Logout" textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane fx:id="dashboardMainPane" layoutX="231.0" prefHeight="650.0" prefWidth="969.0">
+         <children>
+            <ImageView blendMode="COLOR_BURN" cache="true" fitHeight="520.0" fitWidth="300.0" layoutX="576.0" layoutY="43.0" onMouseExited="#exitTblOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/frames/Dash-group.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="627.0" layoutY="25.0" text="Today, Available  vehicles" textAlignment="CENTER">
+               <font>
+                  <Font name="Showcard Gothic" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="710.0" layoutY="46.0" text="cars" textAlignment="CENTER">
+               <font>
+                  <Font name="Showcard Gothic" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </Label>
+            <TableView fx:id="tblCar" blendMode="MULTIPLY" cache="true" fixedCellSize="0.0" layoutX="575.0" layoutY="62.0" onMouseClicked="#tblCarOnAction" onMouseExited="#exitTblOnAction" opacity="0.8" prefHeight="150.0" prefWidth="300.0" style="-fx-background-radius: 20;">
+              <columns>
+                <TableColumn fx:id="colVehiNo" prefWidth="100.0" resizable="false" text="V_No" />
+                <TableColumn fx:id="colVehiModel" prefWidth="185.0" resizable="false" text="Model" />
+              </columns>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </TableView>
+            <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="708.0" layoutY="220.0" text="vans" textAlignment="CENTER">
+               <font>
+                  <Font name="Showcard Gothic" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </Label>
+            <TableView fx:id="tblVan" blendMode="MULTIPLY" cache="true" fixedCellSize="0.0" layoutX="575.0" layoutY="237.0" onMouseClicked="#tblVanOnAction" onMouseExited="#exitTblOnAction" opacity="0.8" prefHeight="150.0" prefWidth="300.0" style="-fx-background-radius: 20;">
+               <columns>
+                  <TableColumn fx:id="colVehiNo1" prefWidth="100.0" resizable="false" text="V_No" />
+                  <TableColumn fx:id="colVehiModel1" prefWidth="185.0" resizable="false" text="Model" />
+               </columns>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </TableView>
+            <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="701.0" layoutY="394.0" text="lorries" textAlignment="CENTER">
+               <font>
+                  <Font name="Showcard Gothic" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </Label>
+            <TableView fx:id="tblLorry" blendMode="MULTIPLY" cache="true" fixedCellSize="0.0" layoutX="575.0" layoutY="409.0" onMouseClicked="#tblLorryOnAction" onMouseExited="#exitTblOnAction" opacity="0.8" prefHeight="150.0" prefWidth="300.0" style="-fx-background-radius: 20;">
+               <columns>
+                  <TableColumn fx:id="colVehiNo2" prefWidth="100.0" resizable="false" text="V_No" />
+                  <TableColumn fx:id="colVehiModel2" prefWidth="185.0" resizable="false" text="Model" />
+               </columns>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </TableView>
+            <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="198.0" layoutY="300.0" text="Memberships" textAlignment="CENTER">
+               <font>
+                  <Font name="Showcard Gothic" size="14.0" />
+               </font>
+            </Label>
+            <PieChart fx:id="pieChartMembers" labelLineLength="5.0" layoutX="45.0" layoutY="280.0" prefHeight="280.0" prefWidth="410.0">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </PieChart>
+            <Label fx:id="lblVehicles" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="215.0" layoutY="25.0" text="vehicles" textAlignment="CENTER">
+               <font>
+                  <Font name="Showcard Gothic" size="14.0" />
+               </font>
+            </Label>
+            <PieChart fx:id="pieChartVehicles" labelLineLength="5.0" layoutX="50.0" layoutY="15.0" prefHeight="275.0" prefWidth="400.0">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </PieChart>
+            <Label fx:id="lblMyImg" alignment="TOP_RIGHT" contentDisplay="TOP" graphicTextGap="0.0" layoutY="527.0" text="Way to Your Dream Tour" textAlignment="CENTER" textFill="#0e6379">
+               <font>
+                  <Font name="Showcard Gothic" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="myImage" fitHeight="110.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icons/car-anim.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="NONE" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="lblClock" alignment="CENTER" blendMode="MULTIPLY" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="800.0" layoutY="610.0" prefHeight="30.0" prefWidth="160.0">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </Label>
+            <Rectangle fx:id="imgBorder" blendMode="COLOR_BURN" fill="TRANSPARENT" height="239.0" layoutX="60.0" layoutY="50.0" stroke="#007cff" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="454.0" />
+            <ImageView fx:id="vehiImage" fitHeight="235.0" fitWidth="450.0" layoutX="62.0" layoutY="52.0" pickOnBounds="true" visible="false" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

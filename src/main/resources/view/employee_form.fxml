@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.wheeldeal.controller.EmployeeFormController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/frames/Frame-employee.png" />
+         </image>
+      </ImageView>
+      <ImageView blendMode="COLOR_BURN" fitHeight="650.0" fitWidth="1200.0" opacity="0.35" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/frames/Frames-glow.gif" />
+         </image>
+      </ImageView>
+      <Label blendMode="MULTIPLY" layoutX="525.0" layoutY="35.0" text="Employee  MANAGE">
+         <font>
+            <Font name="Showcard Gothic" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="382.0" layoutY="115.0" text="Employee ID*">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txtEmpId" blendMode="MULTIPLY" layoutX="382.0" layoutY="140.0" onAction="#txtEmpIdOnAction" prefHeight="30.0" prefWidth="200.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label layoutX="657.0" layoutY="115.0" prefHeight="17.0" prefWidth="44.0" text="Name*">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txtEmpName" blendMode="MULTIPLY" layoutX="656.0" layoutY="140.0" onAction="#txtEmpNameOnAction" prefHeight="30.0" prefWidth="200.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label layoutX="382.0" layoutY="194.0" text="JobRole*">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txtEmpJob" blendMode="MULTIPLY" layoutX="382.0" layoutY="219.0" onAction="#txtEmpJobOnAction" prefHeight="30.0" prefWidth="200.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label layoutX="657.0" layoutY="194.0" text="Tel.no*">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txtEmpTel" blendMode="MULTIPLY" layoutX="656.0" layoutY="219.0" prefHeight="30.0" prefWidth="200.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label layoutX="925.0" layoutY="115.0" prefHeight="17.0" prefWidth="105.0" text="Next Employee ID">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNextEmpID" alignment="CENTER" layoutX="925.0" layoutY="140.0" prefHeight="30.0" prefWidth="100.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <TableView fx:id="tblEmployee" blendMode="MULTIPLY" layoutX="360.0" layoutY="360.0" onMouseClicked="#tblEmployeeOnAction" prefHeight="200.0" prefWidth="700.0">
+        <columns>
+          <TableColumn fx:id="colEmpID" prefWidth="135.0" text="Emp_ID" />
+          <TableColumn fx:id="colName" prefWidth="225.0" text="Name" />
+            <TableColumn fx:id="colJobRole" minWidth="0.0" prefWidth="150.0" text="JobRole" />
+            <TableColumn fx:id="colTel" minWidth="2.0" prefWidth="175.0" text="Tel_No" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </TableView>
+      <JFXButton fx:id="btnReset" contentDisplay="TOP" graphicTextGap="0.0" layoutX="549.0" layoutY="268.0" onAction="#btnResetOnAction" text="Reset" textFill="#edfc6e">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-reset.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnSave" contentDisplay="TOP" graphicTextGap="3.0" layoutX="630.0" layoutY="270.0" onAction="#btnSaveOnAction" text="Save" textFill="#29c63e">
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" contentDisplay="TOP" graphicTextGap="3.0" layoutX="710.0" layoutY="268.0" onAction="#btnUpdateOnAction" text="Update" textFill="#d044af">
+         <graphic>
+            <ImageView fitHeight="47.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-update.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" contentDisplay="TOP" graphicTextGap="0.0" layoutX="787.0" layoutY="268.0" onAction="#btnDeleteOnAction" text="Delete" textFill="#a81010">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnBack" alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="77.0" layoutY="513.0" onAction="#btnBackOnAction" text="Back" textAlignment="CENTER" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/buttons/btn-back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Showcard Gothic" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="lblInvalidEmployeeID" layoutX="363.0" layoutY="170.0" text="**invalid employee id, ( must be like 'E001' )**" textFill="#d70c0c" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblInvalidJob" layoutX="443.0" layoutY="249.0" text="**invalid input**" textFill="#d70c0c" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblInvalidName" layoutX="699.0" layoutY="170.0" text="**invalid name type**" textFill="#d70c0c" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblInvalidTel" layoutX="700.0" layoutY="249.0" text="**invalid contact no**" textFill="#d70c0c" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblClock" alignment="CENTER" blendMode="MULTIPLY" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="1025.0" layoutY="605.0" prefHeight="30.0" prefWidth="160.0">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </Label>
+      <ImageView blendMode="OVERLAY" fitHeight="320.0" fitWidth="230.0" layoutX="7.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/icons/employee-ani.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
